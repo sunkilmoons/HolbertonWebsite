@@ -1,0 +1,45 @@
+nav {
+    font-size: 1.5vw;
+}
+
+h3 {
+    font-size: 6vmax;
+    line-height: 70px;
+}
+
+h2 {
+    font-size: 4vmax;
+    line-height: 120%;
+}
+
+h1 {
+    font-size: 2vmax;
+    line-height: 120%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+article {
+    flex: 2;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    overflow-y: auto;
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        text-align: center;
+    }
+}
