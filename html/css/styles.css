@@ -38,6 +38,18 @@ aside {
     overflow-y: auto;
 }
 
+#timerControls {
+    display: flex;
+    flex-direction: row;
+
+    padding: 25px;
+}
+
+.timerBtn {
+    size: 50px;
+    font-size: 1em;
+}
+
 @media screen and (max-width:800px) {
     nav {
         text-align: center;
