@@ -1,0 +1,30 @@
+<svg id="ic_v60" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3 {
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5;
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <rect id="ic_v60-2" data-name="ic_v60" class="cls-1" width="24" height="24"/>
+  <g id="ic_v601" transform="translate(4.5 6.5)">
+    <g id="Group_313" data-name="Group 313">
+      <path id="Path_101" data-name="Path 101" class="cls-2" d="M3.947,4.12h15l-3.553,12L7.5,16.069Z" transform="translate(-3.947 -4.12)"/>
+    </g>
+    <path id="Path_102" data-name="Path 102" class="cls-2" d="M36,22c2.089,0,2.359-1.053,2.782-1.967C39.45,18.587,37.713,17.932,37,18" transform="translate(-22.5 -15.496)"/>
+    <g id="Group_314" data-name="Group 314" transform="translate(0.496 10)">
+      <path id="Path_103" data-name="Path 103" class="cls-3" d="M7,34H21.011" transform="translate(-7.004 -34)"/>
+    </g>
+  </g>
+</svg>

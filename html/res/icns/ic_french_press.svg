@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-6 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linecap: square;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5;
+      }
+
+      .cls-2, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-4, .cls-6 {
+        stroke-linecap: round;
+      }
+
+      .cls-5 {
+        stroke: #707070;
+      }
+    </style>
+  </defs>
+  <g id="ic_french_press" transform="translate(-103.828)">
+    <g id="ic_french_press-2" data-name="ic_french_press" transform="translate(103.828)">
+      <rect id="Rectangle_177" data-name="Rectangle 177" class="cls-1" width="24" height="24"/>
+      <path id="Path_120" data-name="Path 120" class="cls-2" d="M85.874,11h-8V21.225A.776.776,0,0,0,78.65,22h6.42a.8.8,0,0,0,.8-.8Z" transform="translate(-69.874 -2.531)"/>
+      <path id="Path_121" data-name="Path 121" class="cls-2" d="M113.652-20.144a4.048,4.048,0,0,0-4-3.985,4.048,4.048,0,0,0-4,3.985Z" transform="translate(-97.652 28.613)"/>
+      <circle id="Ellipse_22" data-name="Ellipse 22" class="cls-3" cx="0.742" cy="0.742" r="0.742" transform="translate(11.258 2.5)"/>
+      <path id="Path_122" data-name="Path 122" class="cls-2" d="M2.379,0V1.991L0,2C.056.706,1.168.091,2.379,0Z" transform="translate(5.999 10.848) rotate(-90)"/>
+      <path id="Path_124" data-name="Path 124" class="cls-4" d="M138.828,17.16a.8.8,0,0,0-.8-.8h-1.2v4.5h1.193a.807.807,0,0,0,.807-.807Z" transform="translate(-120.828 -6.879)"/>
+      <path id="Path_132" data-name="Path 132" class="cls-5" d="M12,8.469"/>
+      <path id="Path_133" data-name="Path 133" class="cls-6" d="M1533,114v8.53h2" transform="translate(-1521 -105)"/>
+      <path id="Path_134" data-name="Path 134" class="cls-6" d="M1533,122.53h-2" transform="translate(-1521 -105)"/>
+    </g>
+  </g>
+</svg>

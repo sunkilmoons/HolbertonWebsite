@@ -1,0 +1,24 @@
+<svg id="ic_chemex" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+        stroke-linecap: square;
+        stroke-linejoin: round;
+        stroke-miterlimit: 1.5;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_174" data-name="Rectangle 174" class="cls-1" width="24" height="24"/>
+  <g id="Group_317" data-name="Group 317" transform="translate(5.5 4.5)">
+    <path id="Path_106" data-name="Path 106" class="cls-2" d="M64.414,3.945h10l-2.5,5.5c1.979,1.978,4,6.462,4,6.462-2.331,4.006-11.089,3.924-13,0,0,0,2.02-4.482,4-6.462Z" transform="translate(-62.914 -3.945)"/>
+  </g>
+  <g id="Group_318" data-name="Group 318" transform="translate(4 16.462)">
+    <path id="Path_107" data-name="Path 107" class="cls-2" d="M47.928,35h16" transform="translate(-47.928 -35)"/>
+  </g>
+</svg>

@@ -1,25 +1,51 @@
-nav {
-    font-size: 1.5vw;
+
+/* VARIABLES */
+:root {
+    --primary: white;
+    --dark: #404040;
+    --accent: ##FF7171;
+
+    --light_grey: #D0D0D0;
 }
 
-h3 {
-    font-size: 6vmax;
-    line-height: 70px;
-}
+html {
+    font-size: 62.5%;
+    font-family: 'Lato', sans-serif;
 
-h2 {
-    font-size: 4vmax;
-    line-height: 120%;
-}
-
-h1 {
-    font-size: 2vmax;
-    line-height: 120%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+}
+
+header {
+    padding: 10 0 0;
+    height: 20px;
+}
+
+nav {
+    margin-left: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6, header {
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-size: 4.0rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5;
 }
 
 main {
@@ -38,20 +64,80 @@ aside {
     overflow-y: auto;
 }
 
-#timerControls {
-    display: flex;
-    flex-direction: row;
-
-    padding: 25px;
+/* BREW APP */
+#brewAppContainer {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
+    min-height: 70vh;
+    padding: 20px;
+    margin: 5px 60px;
+    border: 2px solid var(--dark);
+    border-radius: 25px;
 }
 
-.timerBtn {
-    size: 50px;
+/* METHODS SCREEN */
+.method_item {
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+}
+
+.method_icon {
+    flex-grow: 10;
+    width: 7vw;
+    min-width: 50px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+.method_title {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* TIMER SCREEN */
+#timerDisplay {
+    display: none; /* block */
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#timerControls {
+    display: none; /* flex */
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    padding: 25px;
+    bottom: 0;
+}
+
+.timer_button {
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
     font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.timerBtn:hover {
+    background-color: var(--accent);
 }
 
 @media screen and (max-width:800px) {
     nav {
         text-align: center;
+    }
+    header {
+        height: 50px;
     }
 }

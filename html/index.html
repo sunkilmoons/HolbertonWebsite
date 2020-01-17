@@ -5,6 +5,8 @@
     <title>Home</title>
 
     <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,30 +15,29 @@
 <body class="works_on_smartphone">
 
     <header>
-
         <nav>
             <ul>
                 <li class="logo">
                     L
                 </li>
 
-                <li>
+                <li class="nav_item" style="color:white">
                     <a href="index.html">Home</a>
                 </li>
 
-                <li>
+                <li class="nav_item">
                     <a>Beans</a>
                 </li>
 
-                <li>
+                <li class="nav_item">
                     <a>Brewing Methods</a>
                 </li>
 
-                <li>
+                <li class="nav_item">
                     <a>Roasting</a>
                 </li>
 
-                <li>
+                <li class="nav_item">
                     <a href="tweets.html">Tweets</a>
                 </li>
             </ul>
@@ -54,30 +55,62 @@ online that you want.-->
 
         <article>
 
-            <h3 id="timerDisplay">00:00:00</h3>
+            <!-- ABOUT -->
+            <h3 style="font-weight: 700;margin-left: 10px;">About</h3>
 
-            <div id="timerControls">
-                <button id="btn_toggle_sw" class="timerBtn">Start</button>
-                <button id="btn_stop_sw" class="timerBtn">Stop</button>
-                <button id="btn_reset_sw" class="timerBtn">Reset</button>
+            <p><strong style="font-size: 2.4rem;">W</strong>elcome, this website was created to
+                provide useful tools and information regarding the process of making and enjoying third wave specialty
+                coffee. Third wave coffee is a movement that started in the early 2000's that promotes high-quality
+                coffee production and connoisseurship.<br>&ensp;&ensp;&ensp;&ensp;Specialty coffee aims to emphasize the
+                unique qualities and characteristics coffee beans might have due to their diverse genetic nature. Many
+                methods of consumption and production have been created along the way to highlight different qualities
+                of the beans.<br>&ensp;&ensp;&ensp;&ensp;Below is a tool you can use to help you with your manual pour
+                overs and immersion methods. It is important to be consistent if you would like to produce great tasting
+                coffee everytime. Select the brewer you have and be sure to follow along with the steps provided. Enjoy!
+            </p>
+
+            <h1 style="text-align: center;">Brew App</h1>
+
+            <div id="brewAppContainer">
+
+                <div id="brewMethodsContainer">
+                    <figure class=method_item>
+                        <img src="./res/icns/ic_v60.svg" alt="Hario v60 Icon" class="method_icon">
+                        <figcaption class="method_title">Hario v60</figcaption>
+                    </figure>
+
+                    <figure class=method_item>
+                        <img src="./res/icns/ic_chemex.svg" alt="Chemex Icon" class="method_icon">
+                        <figcaption class="method_title">Chemex</figcaption>
+                    </figure>
+
+                    <figure class=method_item>
+                        <img src="./res/icns/ic_french_press.svg" alt="French Press Icon" class="method_icon">
+                        <figcaption class="method_title">French Press</figcaption>
+                    </figure>
+                </div>
+                <h2 id="timerDisplay">00:00:00</h2>
+
+                <div id="timerControls">
+                    <button id="btn_toggle_sw" class="timer_btn">START</button>
+                    <button id="btn_stop_sw" class="timer_btn">STOP</button>
+                    <button id="btn_reset_sw" class="timer_btn">RESET</button>
+                </div>
+
             </div>
-            <p>This is a game called "Gris"</p>
 
-            <p>It was pretty fun! Click on the image to make it bigger...</p>
 
-            <img src="./res/imgs/gris.jpg" style="max-width:100%;height:auto;" class="small" id="smart_thumbnail">
+            <p>This clickable picture is required...</p>
 
-            <h2>Heading 2<br>(A bit smaller)</h2>
-
-            <p>This is another paragraph</p>
-
-            <h1>Heading 3<br>(Pretty Small)</h1>
+            <img src="./res/imgs/gris.jpg" alt="Gris Image" style="max-width:100%;height:auto;" class="small"
+                id="smart_thumbnail">
 
             <p>This is the final paragraph<br>I need to have a total of 4 paragraphs and 3 headings of these
                 sizes
             </p>
 
         </article>
+
         <aside>
             <p>placeholder to add comment thread later</p>
         </aside>
@@ -86,15 +119,13 @@ online that you want.-->
 
     <footer>
 
-        <a href="https://www.holbertonschool.com">
-            <img src="https://www.holbertonschool.com/holberton-logo.png" style="max-width:100%;height:auto;">
-        </a>
-
         <p>
             Made by <a href="https://twitter.com/@cass__db" target="_blank">Cassidy Baskerville</a> for <a
-                href="https://www.holbertonschool.com" target="_blank">Holberton School</a>.
+                href="https://www.holbertonschool.com" target="_blank">
+                <img src="https://www.holbertonschool.com/holberton-logo.png" alt="Holberton Logo"
+                    style="max-width:20%;height:auto;background-color: white;vertical-align: middle;">
+            </a>
         </p>
-
 
     </footer>
 

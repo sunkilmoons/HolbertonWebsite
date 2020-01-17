@@ -4,6 +4,7 @@ class StopWatch {
     constructor() {
 
         var timerDisplay = document.getElementById("timerDisplay"),
+            clock = 0,
             ms = 0,
             s = 0,
             m = 0,
@@ -23,6 +24,7 @@ class StopWatch {
         }
 
         function reset() {
+            clock = 0;
             ms = 0;
             s = 0;
             m = 0;
@@ -31,9 +33,13 @@ class StopWatch {
 
 
         function update() {
-            ms++;
+            clock++;
 
-            if (ms == 100) {
+            if (clock == 10) {
+                clock = 0;
+                ms++;
+            }
+            if (ms == 10) {
                 ms = 0;
                 s++;
             }
@@ -42,7 +48,7 @@ class StopWatch {
                 m++;
             }
 
-            timerDisplay.innerHTML = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms)
+            timerDisplay.innerHTML = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + ms
         }
 
         this.start = start;
