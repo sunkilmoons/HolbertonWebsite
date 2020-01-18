@@ -2,14 +2,11 @@
 
 var isThumbnailLarge = false;
 
-
 // STOPWATCH VARS
 var stopWatch,
     startBtn,
     stopBtn,
     resetBtn;
-
-
 
 document.addEventListener("DOMContentLoaded", function () {
     setUpThumbNail();
@@ -40,3 +37,24 @@ function setUpThumbNail() {
         }
     });
 }
+
+const burgerClick = () => {
+    const burger = document.getElementById("hamburgerBtn");
+    const nav = document.querySelector(".nav_links");
+    const root = document.documentElement;
+
+    var active = false;
+
+    burger.addEventListener("click", () => {
+        console.log("hit hamburger button");
+
+        root.style.setProperty('--nav_ease', 1);
+
+        nav.classList.toggle('nav_slide');
+
+        setTimeout(() => {
+            root.style.setProperty('--nav_ease', 0);
+        }, 2000);
+    })
+}
+burgerClick();

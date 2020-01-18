@@ -1,17 +1,22 @@
 
-/* VARIABLES */
+
 :root {
+    /* COLORS */
     --primary: white;
     --dark: #404040;
-    --accent: ##FF7171;
+    --accent: #FF7171;
+
+    --accentTransparent: rgba(255, 144, 144, 0.103);
 
     --light_grey: #D0D0D0;
+
+    /* VARIABLES */
+    --nav_ease: 0;
 }
 
 html {
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
-
 }
 
 body {
@@ -19,15 +24,30 @@ body {
     font-size: 1.6rem;
 }
 
+/* HEADER */
 header {
-    padding: 10 0 0;
-    height: 20px;
+    height: 40px;
+    position: relative;
 }
 
 nav {
-    margin-left: 20px;
-    font-size: 2.4rem;
-    font-weight: bold;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.nav_links {
+    display: flex;
+}
+
+nav ul li a {
+    font-size: 2.6rem;
+}
+
+#hamburgerBtn {
+    display: none;
 }
 
 h1, h2, h3, h4, h5, h6, header {
@@ -67,6 +87,7 @@ aside {
 /* BREW APP */
 #brewAppContainer {
     display: grid;
+    z-index: -1;
     justify-content: center;
     position: relative;
     background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
@@ -119,7 +140,7 @@ aside {
     bottom: 0;
 }
 
-.timer_button {
+.timer_btn {
     outline: none;
     padding: 10px 20px;
     border: 1px solid var(--dark);
@@ -133,11 +154,48 @@ aside {
     background-color: var(--accent);
 }
 
-@media screen and (max-width:800px) {
-    nav {
-        text-align: center;
+@media only screen and (max-width:800px) {
+    body {
+        overflow-x: hidden;
     }
-    header {
-        height: 50px;
+    #hamburgerBtn {
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-right: 16px;
+        bottom: 0;
+        font-size: 2.8rem;
+    }
+    .nav_links {
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width: 40%;
+        height: 90vh;
+        justify-content: space-evenly;
+        right: 0;
+        height: 92vh;
+        top: 26px;
+        background-color: var(--dark);
+        transition: transform calc(var(--nav_ease) * 0.5s) ease-in;
+        transform: translateX(0%);
+    }
+
+    .nav_links li {
+        width: fit-content;
+    }
+    
+    nav ul li a {
+        color: white;
+    }
+}
+
+.nav_slide {
+    transform: translateX(100%);
+}
+
+@media only screen and (min-width: 800px) {
+    .nav_links {
+        transform: translateX(0%);
     }
 }
