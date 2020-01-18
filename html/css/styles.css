@@ -64,6 +64,11 @@ h2 {
     font-weight: bold;
 }
 
+h3 {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
 p {
     line-height: 1.5;
 }
@@ -82,76 +87,6 @@ article {
 aside {
     flex: 1;
     overflow-y: auto;
-}
-
-/* BREW APP */
-#brewAppContainer {
-    display: grid;
-    z-index: -1;
-    justify-content: center;
-    position: relative;
-    background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
-    min-height: 70vh;
-    padding: 20px;
-    margin: 5px 60px;
-    border: 2px solid var(--dark);
-    border-radius: 25px;
-}
-
-/* METHODS SCREEN */
-.method_item {
-    vertical-align: top;
-    display: inline-block;
-    padding: 10px;
-    text-align: center;
-    width: 120px;
-}
-
-.method_icon {
-    flex-grow: 10;
-    width: 7vw;
-    min-width: 50px;
-    background-color: var(--dark);
-    border-radius: 25px;
-    margin: 0 10px;
-}
-
-.method_title {
-    margin-top: 5px;
-    font-weight: bold;
-}
-
-/* TIMER SCREEN */
-#timerDisplay {
-    display: none; /* block */
-    margin: 0 auto;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    font-weight: bold;
-}
-
-#timerControls {
-    display: none; /* flex */
-    justify-content: center;
-    width: 100%;
-    justify-content: center;
-    position: absolute;
-    padding: 25px;
-    bottom: 0;
-}
-
-.timer_btn {
-    outline: none;
-    padding: 10px 20px;
-    border: 1px solid var(--dark);
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-.timerBtn:hover {
-    background-color: var(--accent);
 }
 
 @media only screen and (max-width:800px) {
@@ -187,6 +122,9 @@ aside {
 
     nav ul li a {
         color: white;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
     }
 }
 

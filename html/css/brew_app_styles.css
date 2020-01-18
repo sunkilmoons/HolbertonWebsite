@@ -1,0 +1,85 @@
+
+/* BREW APP */
+
+#brewAppContainer {
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
+    min-height: 70vh;
+    margin: 5px 5%;
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+}
+
+#selectBrewTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+#brewMethodsContainer {
+    display: grid;
+    width: 95%;
+    margin-bottom: 15%;
+    padding-left: 5%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* METHODS SCREEN */
+.method_item {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+}
+
+.method_icon {
+    flex-grow: 10;
+    width: 15vh;
+    min-width: 75px;
+    background-color: var(--dark);
+    border-radius: 25px;
+    margin: 0 10px;
+}
+
+.method_title {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+/* TIMER SCREEN */
+#timerDisplay {
+    display: none; /* block */
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#timerControls {
+    display: none; /* flex */
+    justify-content: center;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    padding: 25px;
+    bottom: 0;
+}
+
+.timer_btn {
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.timerBtn:hover {
+    background-color: var(--accent);
+}
