@@ -54,7 +54,7 @@ const burgerClick = () => {
 
         setTimeout(() => {
             root.style.setProperty('--nav_ease', 0);
-        }, 2000);
+        }, 1000);
     })
 }
 burgerClick();
