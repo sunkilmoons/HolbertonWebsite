@@ -79,30 +79,36 @@ online that you want.-->
 
             <div class="brewAppContainer">
 
-                <h5 id="selectBrewTitle">Select Your Brewer...</h5>
+                <div id="method_screen">
+                    <h5 id="selectBrewTitle">Select Your Brewer...</h5>
 
-                <div id="brewMethodsContainer">
-                    <figure class="method_item">
-                        <img src="./res/icns/ic_v60.svg" alt="Hario v60 Icon" class="method_icon">
-                        <figcaption class="method_title">Hario v60</figcaption>
-                    </figure>
+                    <div id="brewMethodsContainer">
+                        <figure class="method_item">
+                            <img src="./res/icns/ic_v60.svg" alt="Hario v60 Icon" class="method_icon" id="v60">
+                            <figcaption class="method_title">Hario v60</figcaption>
+                        </figure>
 
-                    <figure class="method_item">
-                        <img src="./res/icns/ic_chemex.svg" alt="Chemex Icon" class="method_icon">
-                        <figcaption class="method_title">Chemex</figcaption>
-                    </figure>
+                        <figure class="method_item">
+                            <img src="./res/icns/ic_chemex.svg" alt="Chemex Icon" class="method_icon" id="chemex">
+                            <figcaption class="method_title">Chemex</figcaption>
+                        </figure>
 
-                    <figure class="method_item">
-                        <img src="./res/icns/ic_french_press.svg" alt="French Press Icon" class="method_icon">
-                        <figcaption class="method_title">French Press</figcaption>
-                    </figure>
+                        <figure class="method_item">
+                            <img src="./res/icns/ic_french_press.svg" alt="French Press Icon" class="method_icon"
+                                id="french_press">
+                            <figcaption class="method_title">French Press</figcaption>
+                        </figure>
+                    </div>
                 </div>
-                <h2 id="timerDisplay">00:00:00</h2>
 
-                <div id="timerControls">
-                    <button id="btn_toggle_sw" class="timer_btn">START</button>
-                    <button id="btn_stop_sw" class="timer_btn">STOP</button>
-                    <button id="btn_reset_sw" class="timer_btn">RESET</button>
+                <div id="timer_screen">
+                    <h2 id="timerDisplay">00:00:00</h2>
+
+                    <div id="timerControls">
+                        <button id="btn_toggle_sw" class="timer_btn">START</button>
+                        <button id="btn_stop_sw" class="timer_btn">STOP</button>
+                        <button id="btn_reset_sw" class="timer_btn">RESET</button>
+                    </div>
                 </div>
 
             </div>
@@ -137,6 +143,7 @@ online that you want.-->
 
     <script src="./js/stop_watch.js"></script>
     <script src="./js/behavior.js"></script>
+    <script src="./js/brew_app.js"></script>
 </body>
 
 </html>
