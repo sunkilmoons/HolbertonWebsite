@@ -1,10 +1,9 @@
 
 /* BREW APP */
 
-#brewAppContainer {
+.brewAppContainer {
     display: flex;
     flex-direction: column;
-    z-index: -1;
     justify-content: center;
     position: relative;
     background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
@@ -21,10 +20,12 @@
 }
 
 #brewMethodsContainer {
-    display: grid;
-    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
     margin-bottom: 15%;
-    padding-left: 5%;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -44,6 +45,10 @@
     background-color: var(--dark);
     border-radius: 25px;
     margin: 0 10px;
+}
+
+.method_icon:hover {
+    background-color: var(--light_dark);
 }
 
 .method_title {

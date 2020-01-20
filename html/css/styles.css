@@ -4,6 +4,7 @@
     /* COLORS */
     --primary: white;
     --dark: #404040;
+    --light_dark: #505050;
     --accent: #FF7171;
 
     --accentTransparent: rgba(255, 144, 144, 0.103);
@@ -11,7 +12,7 @@
     --light_grey: #D0D0D0;
 
     /* VARIABLES */
-    --nav_ease: 0;
+    --nav_ease: 1;
 }
 
 html {
@@ -40,10 +41,11 @@ nav {
 
 .nav_links {
     display: flex;
+    z-index: 1;
 }
 
 nav ul li a {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
 }
 
 #hamburgerBtn {
@@ -69,6 +71,16 @@ h3 {
     font-weight: bold;
 }
 
+h4 {
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
 p {
     line-height: 1.5;
 }
@@ -90,7 +102,7 @@ aside {
 }
 
 @media only screen and (max-width:800px) {
-    body {
+    body{
         overflow-x: hidden;
     }
     #hamburgerBtn {
@@ -112,7 +124,7 @@ aside {
         height: 92vh;
         top: 26px;
         background-color: var(--dark);
-        transition: transform calc(var(--nav_ease) * 0.5s) ease-in;
+        transition: transform 0.5s ease-in;
         transform: translateX(100%);
     }
 
@@ -134,6 +146,7 @@ aside {
 
 @media only screen and (min-width: 800px) {
     .nav_links {
+        display: flex;
         transform: translateX(0%);
     }
 }

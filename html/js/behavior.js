@@ -43,18 +43,24 @@ const burgerClick = () => {
     const nav = document.querySelector(".nav_links");
     const root = document.documentElement;
 
-    var active = false;
+    var active = true;
 
     burger.addEventListener("click", () => {
         console.log("hit hamburger button");
 
-        root.style.setProperty('--nav_ease', 1);
-
         nav.classList.toggle('nav_slide');
-
-        setTimeout(() => {
-            root.style.setProperty('--nav_ease', 0);
-        }, 1000);
     })
 }
 burgerClick();
+
+const methodClick = () => {
+    const methods = document.getElementsByClassName("method_icon");
+
+    for (var i = 0; i < methods.length; i++) {
+        methods[i].addEventListener("click", function () {
+            console.log("item clicked " + methods[i]);
+        });
+    }
+}
+
+methodClick();
