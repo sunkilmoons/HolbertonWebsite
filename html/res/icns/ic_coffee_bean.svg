@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21.348" height="22.957" viewBox="0 0 21.348 22.957">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #212121;
+        stroke: #212121;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="coffee_Bean" data-name="coffee Bean" transform="translate(6.187 -4.697) rotate(30)">
+    <path id="Path_7" data-name="Path 7" class="cls-1" d="M.621-.186c.1.1,1.349,1.641,1.265,4.93S.164,9.6.011,12.92s.922,4.775.922,4.775a7.4,7.4,0,0,0,3.678-3.412A11.648,11.648,0,0,0,5.974,8,8.942,8.942,0,0,0,4.612,2.709,7.242,7.242,0,0,0,.621-.186Z" transform="translate(12.376 2.928) rotate(1)"/>
+    <path id="Path_7-2" data-name="Path 7" class="cls-1" d="M.625.008c.1.1,1.349,1.641,1.265,4.93S.168,9.79.015,13.114s.922,4.775.922,4.775a7.4,7.4,0,0,0,3.678-3.412A11.648,11.648,0,0,0,5.978,8.2,8.942,8.942,0,0,0,4.615,2.9,7.242,7.242,0,0,0,.625.008Z" transform="translate(11.571 20.796) rotate(-179)"/>
+  </g>
+</svg>

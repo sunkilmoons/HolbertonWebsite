@@ -1,6 +1,5 @@
 
 /* BREW APP */
-
 .brewAppContainer {
     display: block;
     position: relative;
@@ -29,7 +28,8 @@
 #selectBrewTitle {
     width: 100%;
     text-align: center;
-    margin-bottom: 10%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 .method_item {
@@ -41,7 +41,6 @@
 }
 
 .method_icon {
-    flex-grow: 10;
     width: 15vh;
     min-width: 75px;
     background-color: var(--dark);
@@ -58,9 +57,36 @@
     font-weight: bold;
 }
 
+/* BREW DESCRIPTION SCREEN */
+#brew_desc_screen {
+    display: none;
+}
+
+#brew_name {
+    width: 100%;
+    text-align: center;
+    margin-top: 10vh;
+    background-color: blue;
+}
+
+#brew_desc {
+    width: fit-content;
+    text-align: center;
+    margin: 5% 10% 0;
+    background-color: yellow;
+}
+
 /* TIMER SCREEN */
 #timer_screen {
     display: none;
+}
+
+#btn_back {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    left: 5%;
 }
 
 #timerDisplay {

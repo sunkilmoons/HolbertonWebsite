@@ -79,6 +79,8 @@ online that you want.-->
 
             <div class="brewAppContainer">
 
+                <button id="btn_back" class="timer_btn">BACK</button>
+
                 <div id="method_screen">
                     <h5 id="selectBrewTitle">Select Your Brewer...</h5>
 
@@ -101,12 +103,31 @@ online that you want.-->
                     </div>
                 </div>
 
+                <div id="brew_desc_screen">
+                    <h5 id="brew_name"></h5>
+
+                    <p id="brew_desc"></p>
+
+                    <div id="brew_details_container">
+                        <figure class="brew_detail_item">
+                            <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
+                            <figcaption class="brew_detail_item_name">Coffee Amount</figcaption>
+                        </figure>
+                        <figure class="brew_detail_item">
+                            <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
+                            <figcaption class="brew_detail_item_name">Water Amount</figcaption>
+                        </figure>
+                        <figure class="brew_detail_item">
+                            <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
+                            <figcaption class="brew_detail_item_name">Grind Size</figcaption>
+                        </figure>
+                    </div>
+                </div>
                 <div id="timer_screen">
                     <h2 id="timerDisplay">00:00:00</h2>
 
                     <div id="timerControls">
                         <button id="btn_toggle_sw" class="timer_btn">START</button>
-                        <button id="btn_stop_sw" class="timer_btn">STOP</button>
                         <button id="btn_reset_sw" class="timer_btn">RESET</button>
                     </div>
                 </div>
@@ -142,6 +163,7 @@ online that you want.-->
     </footer>
 
     <script src="./js/stop_watch.js"></script>
+    <script src="./js/brew.js"></script>
     <script src="./js/behavior.js"></script>
     <script src="./js/brew_app.js"></script>
 </body>
