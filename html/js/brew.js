@@ -1,31 +1,27 @@
 "use strict";
 
 const StepType = {
-    BLOOM: { value: 1, name: "Bloom", img: "" },
-    POUR: { value: 2, name: "Pour", img: "" },
-    WAIT: { value: 3, name: "Wait", img: "" },
-    STIR: { value: 4, name: "Stir", img: "" },
-    SPIN: { value: 5, name: "Spin", img: "" },
-    FINISHED: { value: 6, name: "Finished", img: "" }
+    BLOOM: { value: 1, name: "Bloom", icon: "local_florist" },
+    POUR: { value: 2, name: "Pour", icon: "invert_colors" }, // opacity
+    WAIT: { value: 3, name: "Wait", icon: "watch_later" },
+    STIR: { value: 4, name: "Stir", icon: "replay" },
+    SPIN: { value: 5, name: "Spin", icon: "360" },
+    FINISHED: { value: 6, name: "Finished", icon: "check" }
 }
 
 Object.freeze(StepType);
 
 class BrewStep {
-    constructor(type, description, pourAmt, duration) {
+    constructor(type = null, description = "", pourAmt = 0, duration = 0) {
         this.type = type;
         this.description = description;
         this.pourAmt = pourAmt;
         this.duration = duration;
-
-        this.currentPour = 0;
-        this.timeLeft = duration;
     }
 }
 
 class Brew {
-
-    constructor(name, description, coffeeAmt, waterAmt, grindSize, steps) {
+    constructor(name = "", description = "", coffeeAmt = 0, waterAmt = 0, grindSize = "", steps = null) {
         this.name = name;
         this.description = description;
         this.coffeeAmt = coffeeAmt;

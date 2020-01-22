@@ -1,48 +1,61 @@
 "use strict";
 
-// STRINGS
+// VARIABLES
+var screen_state = 0;
+var selectedbrew = new Brew();
+
+// SHARED ELEMENTS
 const v60 = "Hario v60";
 const chemex = "Chemex";
 const french_press = "French Press";
 
-const stopWatch = new StopWatch();
+const back_btn = document.getElementById("btn_back");
 
-// BUTTONS
+// METHOD SCREEN
+const methodScreen_div = document.getElementById("method_screen");
+
 const v60_btn = document.getElementById("v60");
 const chemex_btn = document.getElementById("chemex");
 const frenchPress_btn = document.getElementById("french_press");
 
-const back_btn = document.getElementById("btn_back");
+// DESCRIPTION SCREEN
+const brewDescScreen_div = document.getElementById("brew_desc_screen");
+
+const brewName_h = document.getElementById("brew_name");
+const brewDesc_p = document.getElementById("brew_desc");
+const brewCoffeeAmt_figCap = document.getElementById("coffee_amount");
+const brewWaterAmt_figCap = document.getElementById("water_amount");
+const brewGrindSize_figCap = document.getElementById("grind_size");
+
+const brew_btn = document.getElementById("btn_brew");
+
+// TIMER SCREEN
+const timerScreen_div = document.getElementById("timer_screen");
+
+// const stepTypeIcon_i = document.getElementById("step_type_icon");
+// const stepType_figCap = document.getElementById("step_type");
+
+// const stepCurrentPour_p = document.getElementById("step_current_pour");
+// const stepPourAmount_p = document.getElementById("step_pour_amount");
+
+// const totalPourAmount_p = document.getElementById("total_pour");
+
 const toggle_btn = document.getElementById("btn_toggle_sw");
 const reset_btn = document.getElementById("btn_reset_sw");
 
-// SCREENS
-var screen_state = 0;
-const methodScreen_div = document.getElementById("method_screen");
-const brewDescScreen_div = document.getElementById("brew_desc_screen");
-const timerScreen_div = document.getElementById("timer_screen");
-
-// VARIABLES
-var selectedbrew = new Brew("null", "", "", "", "", 0);
-
-// DESCRIPTION PAGE
-const brewName_h = document.getElementById("brew_name");
-const brewDesc_p = document.getElementById("brew_desc");
+var stopWatch;
+// const stopWatch = new StopWatch();
 
 // INIT
 const initBrewApp = function () {
 
     back_btn.addEventListener("click", function () {
         onScreenChange(false);
-
-        methodScreen_div.style.display = "block";
-        timerScreen_div.style.display = "none";
-
-        stopWatch.reset();
-
-        if (stopWatch.isRunning) toggle_btn.innerHTML = "PAUSE";
-        else toggle_btn.innerHTML = "START";
     });
+
+    brew_btn.addEventListener("click", function () {
+        onScreenChange(true);
+    })
 
     toggle_btn.addEventListener("click", function () {
         stopWatch.toggle();
@@ -87,16 +100,27 @@ const onScreenChange = function (goForward) {
         case 1: // brew description screen
             back_btn.style.display = "block";
             methodScreen_div.style.display = "none";
-            brewDescScreen_div.style.display = "block";
+            brewDescScreen_div.style.display = "flex";
             timerScreen_div.style.display = "none";
 
-            brewName_h.innerHTML = selectedbrew.name;
+            // initialize display values
+            brewName_h.innerHTML = selectedbrew.name + "<br>Method";
             brewDesc_p.innerHTML = selectedbrew.description;
+            brewCoffeeAmt_figCap.innerHTML = selectedbrew.coffeeAmt + "g";
+            brewWaterAmt_figCap.innerHTML = selectedbrew.waterAmt + "g";
+            brewGrindSize_figCap.innerHTML = selectedbrew.grindSize;
+
+            // initialize timer variables
+            stopWatch = null;
+            stopWatch = new StopWatch(selectedbrew.steps);
             break;
 
         case 2: // timer screen
             brewDescScreen_div.style.display = "none";
             timerScreen_div.style.display = "block";
+
+            // stepTypeIcon_i.innerHTML = selectedbrew.steps[currentStepIndex].type.icon;
+            // stepType_figCap.innerHTML = selectedbrew.steps[currentStepIndex].type.name;
             break;
     }
 }

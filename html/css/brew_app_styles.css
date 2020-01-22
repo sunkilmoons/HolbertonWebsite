@@ -10,6 +10,22 @@
     border-radius: 25px;
 }
 
+#btn_back {
+    display: none;
+    width: fit-content;
+    outline: none;
+    background-color: white;
+    padding: 10px 20px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
 /* METHODS SCREEN */
 #method_screen {
     display: block;
@@ -60,20 +76,61 @@
 /* BREW DESCRIPTION SCREEN */
 #brew_desc_screen {
     display: none;
+    flex-direction: column;
+    min-height: 70vh;
+    justify-content: flex-start;
 }
 
 #brew_name {
     width: 100%;
     text-align: center;
     margin-top: 10vh;
-    background-color: blue;
+    line-height: 3rem;
 }
 
 #brew_desc {
     width: fit-content;
     text-align: center;
-    margin: 5% 10% 0;
-    background-color: yellow;
+    margin: 5vh 10% 5%;
+}
+
+#brew_details_container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4vh;
+}
+
+#brew_details_container figure {
+    width: 100px;
+    height: 100px;
+    background-color: var(--light_grey);
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+#brew_details_container img {
+    margin-bottom: 5px;
+}
+
+#coffee_amount, #water_amount, #grind_size {
+    margin: 10px;
+}
+
+#btn_brew {
+    width: fit-content;
+    outline: none;
+    background-color: var(--accent);
+    padding: 10px 20px;
+    border: 1px solid var(--dark);
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 10px;
+    color: white;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
 
 /* TIMER SCREEN */
@@ -81,29 +138,92 @@
     display: none;
 }
 
-#btn_back {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    top: 5%;
-    left: 5%;
-}
-
 #timerDisplay {
-    position: absolute;
-    width: 100%;
-    top: 0;
+    width: fit-content;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
+    margin: 5% auto 0;
+}
+
+#step_container {
+    display: flex;
+    height: 50vh;
+    min-height: 200px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* CONTAINER FOR STEP TYPE */
+#step_container > figure {
+    width: 100%;
+    display: flex;
+    margin-top: 7vh;
+    flex-direction: row;
+    justify-content: center;
+}
+/* STEP TYPE ICON */
+#step_container i {
+    font-size: 10vh;
+    background-color: white;
+    border-radius: 50%;
+    padding: 7px;
+    margin-right: 1%;
+    text-align: center;
+}
+/* STEP TYPE CATPION */
+#step_container figcaption {
+    width: fit-content;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1%;
+}
+
+/* CONTAINER FOR STEP POUR AMOUNT */
+#step_pour_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 7vh 0;
+}
+
+#step_current_pour {
+    font-size: 2.0rem;
+}
+
+#pour_divider {
+    background-color: var(--light_dark);
+    width: 100px;
+    height: 4px;
+}
+
+#step_pour_amount {
+    margin-top: 2%;
+    font-size: 2.0rem;
 }
 
 #timerControls {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     text-align: center;
     margin-bottom: 5%;
+}
+
+#duration {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+#total_pour {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    font-size: 2.2rem;
+    font-weight: bold;
 }
 
 .timer_btn {

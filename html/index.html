@@ -6,9 +6,12 @@
 
     <!-- STYLES -->
     <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/brew_app_styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- DELETE (FOR HAMBURGER ICON)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -77,10 +80,12 @@ online that you want.-->
 
             <h4 style="text-align: center;">Brew App</h4>
 
+            <!-- BREW APP-->
             <div class="brewAppContainer">
 
                 <button id="btn_back" class="timer_btn">BACK</button>
 
+                <!-- METHOD SCREEN-->
                 <div id="method_screen">
                     <h5 id="selectBrewTitle">Select Your Brewer...</h5>
 
@@ -103,37 +108,63 @@ online that you want.-->
                     </div>
                 </div>
 
+                <!-- BREW DESCRIPTION SCREEN-->
                 <div id="brew_desc_screen">
                     <h5 id="brew_name"></h5>
 
                     <p id="brew_desc"></p>
 
                     <div id="brew_details_container">
-                        <figure class="brew_detail_item">
+                        <figure>
                             <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
-                            <figcaption class="brew_detail_item_name">Coffee Amount</figcaption>
+                            <figcaption><strong>Coffee Amount</strong></figcaption>
+                            <figcaption id="coffee_amount"></figcaption>
                         </figure>
-                        <figure class="brew_detail_item">
-                            <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
-                            <figcaption class="brew_detail_item_name">Water Amount</figcaption>
+                        <figure>
+                            <i class="material-icons">invert_colors</i>
+                            <figcaption><strong>Water Amount</strong></figcaption>
+                            <figcaption id="water_amount"></figcaption>
                         </figure>
-                        <figure class="brew_detail_item">
-                            <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
-                            <figcaption class="brew_detail_item_name">Grind Size</figcaption>
+                        <figure>
+                            <i class="material-icons">grain</i>
+                            <figcaption><strong>Grind<br>Size</strong></figcaption>
+                            <figcaption id="grind_size"></figcaption>
                         </figure>
                     </div>
+
+                    <button id="btn_brew">BREW</button>
                 </div>
+
+                <!-- TIMER SCREEN-->
                 <div id="timer_screen">
+
                     <h2 id="timerDisplay">00:00:00</h2>
 
+                    <div id="step_container">
+
+                        <figure id="step_type_container">
+                            <!--local_florist-->
+                            <i id="step_type_icon" class="material-icons"></i>
+                            <figcaption id="step_type"></figcaption>
+                        </figure>
+
+                        <div id="step_pour_container">
+                            <p id="step_current_pour">0.0g</p>
+                            <div id="pour_divider"></div>
+                            <p id="step_pour_amount"></p>
+                        </div>
+                    </div>
+
                     <div id="timerControls">
+                        <p id="duration">0:00</p>
                         <button id="btn_toggle_sw" class="timer_btn">START</button>
                         <button id="btn_reset_sw" class="timer_btn">RESET</button>
+                        <p id="total_pour">0.0g</p>
                     </div>
                 </div>
 
             </div>
-
+            <!-- END OF BREW APP-->
 
             <p>This clickable picture is required...</p>
 
