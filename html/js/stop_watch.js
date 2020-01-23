@@ -17,6 +17,7 @@ class StopWatch {
 
         var stepTypeIcon_i = document.getElementById("step_type_icon"),
             stepType_figCap = document.getElementById("step_type"),
+            stepDescription_p = document.getElementById("step_description"),
             stepCurrentPour_p = document.getElementById("step_current_pour"),
             stepPourAmount_p = document.getElementById("step_pour_amount"),
             duration_p = document.getElementById("duration"),
@@ -100,6 +101,7 @@ class StopWatch {
         function startNewStep() {
             stepTypeIcon_i.innerHTML = steps[currentStepIndex].type.icon;
             stepType_figCap.innerHTML = steps[currentStepIndex].type.name;
+            stepDescription_p.innerHTML = steps[currentStepIndex].description;
             stepPourAmount_p.innerHTML = steps[currentStepIndex].pourAmt.toFixed(1) + "g";
 
             duration = steps[currentStepIndex].duration;

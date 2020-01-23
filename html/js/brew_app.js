@@ -120,6 +120,10 @@ const onMethodSelect = function (method) {
         case v60:
             selectedbrew = getV60method();
             break;
+
+        case chemex:
+            selectedbrew = getChemexMethod();
+            break;
     }
 
     console.log(`Selected Type: ${method}\nMethod Name: ${selectedbrew.name}`);
@@ -128,9 +132,9 @@ const onMethodSelect = function (method) {
 }
 
 // CREATE V60 METHOD
-const getV60method = function () {
+const getV60method = () => {
 
-    var brewSteps = [
+    let brewSteps = [
         new BrewStep(StepType.BLOOM, "Saturate the coffee bed", 75, 10),
         new BrewStep(StepType.WAIT, "Let the coffee de-gas", 0, 20),
         new BrewStep(StepType.POUR, "Pour in concentric circles", 225, 30),
@@ -144,9 +148,36 @@ const getV60method = function () {
     return new Brew(
         "James Hoffmann",
         "A delicious and balanced pour-over recipe created by " +
-        "<a href=\"https://www.jameshoffmann.co.uk\" target=\"_blank\" style = \"color: var(--accent);\">James Hoffmann</a>",
+        "<a href=\"https://youtu.be/AI4ynXzkSQo\" target=\"_blank\" style = \"color: var(--accent);\">James Hoffmann</a>",
         30,
         500,
         "Fine",
+        brewSteps);
+}
+
+const getChemexMethod = () => {
+
+    let brewSteps = [
+        new BrewStep(StepType.BLOOM, "Saturate the coffee bed", 110, 15),
+        new BrewStep(StepType.STIR, "Stir the grounds, wet every particle", 0, 30), // 0:15 . 100
+        new BrewStep(StepType.POUR, "Pour in heavily in circles", 200, 25), // 0:45 .300
+        new BrewStep(StepType.WAIT, "Let the brew draw down", 0, 20), // 1:10
+        new BrewStep(StepType.POUR, "Pour in center", 200, 20), // 1:30 . 500
+        new BrewStep(StepType.WAIT, "Let the brew draw down", 0, 40), // 1:50
+        new BrewStep(StepType.POUR, "Pour in center", 200, 20), // 2:30 .700
+        new BrewStep(StepType.WAIT, "Let the brew draw down", 0, 40), // 2:50
+        new BrewStep(StepType.POUR, "Pour in center", 150, 15), // 3:30 .850
+        new BrewStep(StepType.POUR, "Pour in around edges", 50, 5), // 3:45 .900
+        new BrewStep(StepType.WAIT, "Let the brew draw down and finish", 0, 120), // 5:45
+        new BrewStep(StepType.FINISHED, "Brew should be about done. Enjoy your coffee!", 0, 1)
+    ];
+
+    return new Brew(
+        "Dylan Siemens",
+        "A clean and crisp brew made by " +
+        "<a href=\"https://youtu.be/N3rwdIV4-MM\" target=\"_blank\" style = \"color: var(--accent);\">Dylan Siemens</a> from Onyx Coffee Labs",
+        55,
+        900,
+        "Coarse",
         brewSteps);
 }

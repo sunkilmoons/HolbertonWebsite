@@ -4,8 +4,9 @@
     display: block;
     position: relative;
     background-image: linear-gradient(to bottom, var(--primary), var(--light_grey));
+    min-width: 300px;
     min-height: 70vh;
-    margin: 5px 5%;
+    margin: 5px 5% 30px;
     border: 2px solid var(--dark);
     border-radius: 25px;
 }
@@ -137,33 +138,33 @@
     display: none;
 }
 
+#step_container {
+    display: flex;
+    height: 70vh;
+    min-height: 400px;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #timerDisplay {
     width: fit-content;
     text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    margin: 5% auto 0;
-}
-
-#step_container {
-    display: flex;
-    height: 50vh;
-    min-height: 200px;
-    flex-direction: column;
-    justify-content: center;
+    margin: 5% auto auto;
 }
 
 /* CONTAINER FOR STEP TYPE */
 #step_container > figure {
     width: 100%;
     display: flex;
-    margin-top: 7vh;
+    margin: auto;
     flex-direction: row;
     justify-content: center;
 }
 /* STEP TYPE ICON */
 #step_container i {
-    font-size: 10vh;
+    font-size: calc(20pt + 8vh);
     background-color: white;
     border-radius: 50%;
     padding: 7px;
@@ -180,12 +181,18 @@
     margin-left: 1%;
 }
 
+#step_description {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: auto;
+}
+
 /* CONTAINER FOR STEP POUR AMOUNT */
 #step_pour_container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 7vh 0;
+    margin: auto;
 }
 
 #step_current_pour {
@@ -207,8 +214,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 5%;
+    margin: auto 0 5%;
     justify-content: center;
 }
 
