@@ -1,11 +1,26 @@
 "use strict";
 
 var isThumbnailLarge = false;
+var isOpen = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     setUpThumbNail();
     initBrewApp();
     initBurgerClick();
+
+    const nav = document.querySelector(".nav_links");
+
+    window.addEventListener("resize", function () {
+        if (document.documentElement.clientWidth > 800) {
+            nav.style.display = "flex";
+            nav.style.transform = `translateX(0%)`;
+            isOpen = false;
+        } else {
+            nav.style.display = "none";
+            nav.style.transform = `translateX(100%)`;
+            isOpen = false;
+        }
+    }, true);
 });
 
 function setUpThumbNail() {
@@ -27,10 +42,8 @@ function setUpThumbNail() {
 const initBurgerClick = () => {
     const burger = document.getElementById("hamburgerBtn");
     const nav = document.querySelector(".nav_links");
-    var isOpen = false,
-        interval,
+    var interval,
         percentClosed = 100,
-        animDuration = 1,
         clock = 0;
 
     burger.addEventListener("click", () => {

@@ -32,19 +32,10 @@ const brew_btn = document.getElementById("btn_brew");
 // TIMER SCREEN
 const timerScreen_div = document.getElementById("timer_screen");
 
-// const stepTypeIcon_i = document.getElementById("step_type_icon");
-// const stepType_figCap = document.getElementById("step_type");
-
-// const stepCurrentPour_p = document.getElementById("step_current_pour");
-// const stepPourAmount_p = document.getElementById("step_pour_amount");
-
-// const totalPourAmount_p = document.getElementById("total_pour");
-
 const toggle_btn = document.getElementById("btn_toggle_sw");
 const reset_btn = document.getElementById("btn_reset_sw");
 
 var stopWatch;
-// const stopWatch = new StopWatch();
 
 // INIT
 const initBrewApp = function () {
@@ -118,14 +109,11 @@ const onScreenChange = function (goForward) {
         case 2: // timer screen
             brewDescScreen_div.style.display = "none";
             timerScreen_div.style.display = "block";
-
-            // stepTypeIcon_i.innerHTML = selectedbrew.steps[currentStepIndex].type.icon;
-            // stepType_figCap.innerHTML = selectedbrew.steps[currentStepIndex].type.name;
             break;
     }
 }
 
-// ON METHOD CHOSEN -> GO TO TIMER SCREEN // TODO: go to brew description page
+// ON METHOD CHOSEN -> GO TO BREW DESC SCREEN
 const onMethodSelect = function (method) {
 
     switch (method) {
@@ -153,5 +141,12 @@ const getV60method = function () {
         new BrewStep(StepType.FINISHED, "Brew should be about done. Enjoy your coffee!", 0, 1)
     ];
 
-    return new Brew("James Hoffman", "A delicious and balanced pour-over recipe created by James Hoffman.", 30, 500, "Fine", brewSteps);
+    return new Brew(
+        "James Hoffmann",
+        "A delicious and balanced pour-over recipe created by " +
+        "<a href=\"https://www.jameshoffmann.co.uk\" target=\"_blank\" style = \"color: var(--accent);\">James Hoffmann</a>",
+        30,
+        500,
+        "Fine",
+        brewSteps);
 }

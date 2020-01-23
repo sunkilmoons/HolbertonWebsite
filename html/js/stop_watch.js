@@ -94,6 +94,7 @@ class StopWatch {
             totalPourAmount_p.innerHTML = totalPour.toFixed(1) + "g";
             stepCurrentPour_p.innerHTML = currentPour.toFixed(1) + "g";
             duration_p.innerHTML = secondsToTime(duration);
+            console.log(`Duration: ${duration}`);
         }
 
         function startNewStep() {
@@ -118,7 +119,9 @@ class StopWatch {
 }
 
 function secondsToTime(seconds) {
-    let min = Math.round(seconds / 60);
+    let min = seconds / 60;
+    if (min < 1) min = 0;
+    min = Math.round(min);
     let sec = seconds % 60;
 
     return (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);

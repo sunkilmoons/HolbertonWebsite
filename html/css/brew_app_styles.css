@@ -77,7 +77,7 @@
     display: none;
     flex-direction: column;
     min-height: 70vh;
-    justify-content: flex-start;
+    align-items: center;
 }
 
 #brew_name {
@@ -88,15 +88,15 @@
 }
 
 #brew_desc {
-    width: fit-content;
     text-align: center;
     margin: 5vh 10% 5%;
 }
 
 #brew_details_container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 4vh;
+    margin: 4vh;;
 }
 
 #brew_details_container figure {
@@ -106,6 +106,7 @@
     border-radius: 25px;
     text-align: center;
     padding: 10px;
+    margin: 5px 5px;
 }
 
 #brew_details_container img {
@@ -117,20 +118,18 @@
 }
 
 #btn_brew {
-    width: fit-content;
+    width: 90px;
     outline: none;
+    align-self: flex-end;
     background-color: var(--accent);
     padding: 10px 20px;
     border: 1px solid var(--dark);
     border-radius: 10px;
     font-size: 1em;
     font-weight: bold;
-    margin: 0 10px;
     color: white;
-    position: absolute;
-    bottom: 5%;
-    right: 2vw;
     cursor: pointer;
+    margin: auto 5% 5%;
 }
 
 /* TIMER SCREEN */
@@ -207,33 +206,39 @@
 #timerControls {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
     margin-bottom: 5%;
-    background-color: blue;
     justify-content: center;
+}
+
+#timerControls > div {
+    text-align: center;
 }
 
 #btn_toggle_sw {
     cursor: pointer;
-    margin-right: 1vw;
+    margin: 0 1vw;
 }
 
 #btn_reset_sw {
     cursor: pointer;
-    margin-left: 1vw;
+    margin: 0 1vw;
 }
 
 #duration {
     font-size: 2.2rem;
     font-weight: bold;
-    margin: auto 5vw;
+
+    margin: 0 5vw 0 0;
+    /* margin: auto 5vw; */
 }
 
 #total_pour {
     font-size: 2.2rem;
     font-weight: bold;
-    background-color: yellow;
-    margin: auto 5vw;
+    margin: 0 0 0 5vw;
+    /* margin: auto 5vw; */
 }
 
 .timer_btn {
