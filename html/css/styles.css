@@ -119,6 +119,7 @@ aside {
         font-size: 2.8rem;
     }
     .nav_links {
+        display: none;
         position: absolute;
         flex-direction: column;
         align-items: center;
@@ -129,7 +130,7 @@ aside {
         height: 92vh;
         top: 26px;
         background-color: var(--dark);
-        transition: transform 0.5s ease-in;
+        /* transition: transform 0.5s ease-in; */
         transform: translateX(100%);
     }
 
@@ -146,7 +147,7 @@ aside {
 }
 
 .nav_slide {
-    transform: translateX(0%);
+    /* transform: translateX(0%); */
 }
 
 @media only screen and (min-width: 800px) {

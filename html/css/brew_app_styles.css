@@ -14,16 +14,14 @@
     display: none;
     width: fit-content;
     outline: none;
-    background-color: white;
-    padding: 10px 20px;
-    border: 1px solid var(--dark);
     border-radius: 10px;
-    font-size: 1em;
+    font-size: 2em;
     font-weight: bold;
     margin: 0 10px;
     position: absolute;
     top: 5%;
     left: 5%;
+    cursor: pointer;
 }
 
 /* METHODS SCREEN */
@@ -62,6 +60,7 @@
     background-color: var(--dark);
     border-radius: 25px;
     margin: 0 10px;
+    cursor: pointer;
 }
 
 .method_icon:hover {
@@ -130,7 +129,8 @@
     color: white;
     position: absolute;
     bottom: 5%;
-    right: 5%;
+    right: 2vw;
+    cursor: pointer;
 }
 
 /* TIMER SCREEN */
@@ -205,25 +205,35 @@
 }
 
 #timerControls {
+    display: flex;
+    flex-direction: row;
     width: 100%;
-    text-align: center;
     margin-bottom: 5%;
+    background-color: blue;
+    justify-content: center;
+}
+
+#btn_toggle_sw {
+    cursor: pointer;
+    margin-right: 1vw;
+}
+
+#btn_reset_sw {
+    cursor: pointer;
+    margin-left: 1vw;
 }
 
 #duration {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
     font-size: 2.2rem;
     font-weight: bold;
+    margin: auto 5vw;
 }
 
 #total_pour {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
     font-size: 2.2rem;
     font-weight: bold;
+    background-color: yellow;
+    margin: auto 5vw;
 }
 
 .timer_btn {

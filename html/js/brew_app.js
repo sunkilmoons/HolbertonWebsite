@@ -9,7 +9,7 @@ const v60 = "Hario v60";
 const chemex = "Chemex";
 const french_press = "French Press";
 
-const back_btn = document.getElementById("btn_back");
+const backBtn_i = document.getElementById("btn_back");
 
 // METHOD SCREEN
 const methodScreen_div = document.getElementById("method_screen");
@@ -49,7 +49,7 @@ var stopWatch;
 // INIT
 const initBrewApp = function () {
 
-    back_btn.addEventListener("click", function () {
+    backBtn_i.addEventListener("click", function () {
         onScreenChange(false);
     });
 
@@ -92,13 +92,13 @@ const onScreenChange = function (goForward) {
 
     switch (screen_state) {
         case 0: // select method screen
-            back_btn.style.display = "none";
+            backBtn_i.style.display = "none";
             methodScreen_div.style.display = "block";
             brewDescScreen_div.style.display = "none";
             break;
 
         case 1: // brew description screen
-            back_btn.style.display = "block";
+            backBtn_i.style.display = "block";
             methodScreen_div.style.display = "none";
             brewDescScreen_div.style.display = "flex";
             timerScreen_div.style.display = "none";

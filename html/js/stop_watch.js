@@ -118,9 +118,8 @@ class StopWatch {
 }
 
 function secondsToTime(seconds) {
-    let min = seconds / 60;
+    let min = Math.round(seconds / 60);
     let sec = seconds % 60;
-    min = Math.round(min);
 
     return (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
 }
