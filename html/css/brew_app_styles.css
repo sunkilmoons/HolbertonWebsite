@@ -213,8 +213,7 @@
 #timerControls {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto 0 5%;
+    margin: auto 5% 5%;
     justify-content: center;
 }
 
