@@ -6,7 +6,8 @@ const StepType = {
     WAIT: { value: 3, name: "Wait", icon: "watch_later" },
     STIR: { value: 4, name: "Stir", icon: "replay" },
     SPIN: { value: 5, name: "Spin", icon: "360" },
-    FINISHED: { value: 6, name: "Finished", icon: "check" }
+    SCOOP: { value: 6, name: "Scoop", icon: "rowing" },
+    FINISHED: { value: 7, name: "Finished", icon: "check" }
 }
 
 Object.freeze(StepType);
