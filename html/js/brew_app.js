@@ -89,6 +89,11 @@ const onScreenChange = function (goForward) {
             break;
 
         case 1: // brew description screen
+            if (stopWatch != undefined) {
+                stopWatch.reset();
+                toggle_btn.innerHTML = "START";
+            }
+
             backBtn_i.style.display = "block";
             methodScreen_div.style.display = "none";
             brewDescScreen_div.style.display = "flex";
@@ -102,7 +107,7 @@ const onScreenChange = function (goForward) {
             brewGrindSize_figCap.innerHTML = selectedbrew.grindSize;
 
             // initialize timer variables
-            stopWatch = null;
+            stopWatch = undefined;
             stopWatch = new StopWatch(selectedbrew.steps);
             break;
 
@@ -124,6 +129,10 @@ const onMethodSelect = function (method) {
         case chemex:
             selectedbrew = getChemexMethod();
             break;
+
+        case french_press:
+            selectedbrew = getFrenchPressMethod();
+            break;
     }
 
     console.log(`Selected Type: ${method}\nMethod Name: ${selectedbrew.name}`);
@@ -131,7 +140,6 @@ const onMethodSelect = function (method) {
     onScreenChange(true);
 }
 
-// CREATE V60 METHOD
 const getV60method = () => {
 
     let brewSteps = [
@@ -180,4 +188,26 @@ const getChemexMethod = () => {
         900,
         "Coarse",
         brewSteps);
+}
+
+const getFrenchPressMethod = () => {
+
+    let brewSteps = [
+        new BrewStep(StepType.POUR, "Make sure all the coffee is evenly saturated", 300, 25),
+        new BrewStep(StepType.WAIT, "Let it extract", 0, 240),
+        new BrewStep(StepType.STIR, "Stir the crust, don't over agitate", 0, 10),
+        new BrewStep(StepType.SCOOP, "Scoop out coffee grounds from the top", 0, 20),
+        new BrewStep(StepType.WAIT, "The longer you wait, the less sediment in your cup", 0, 60),
+        new BrewStep(StepType.FINISHED, "Enjoy! ;)", 0, 1)
+    ];
+
+    return new Brew(
+        "Chris Baca",
+        "A thick, mouthfilling brew recipe made by " +
+        "<a href=\"https://youtu.be/fl79p_P4nbo\" target=\"_blank\" style = \"color: var(--accent);\">Chris Baca</a> from Cat & Cloud Coffee Roasters",
+        20,
+        300,
+        "Medium",
+        brewSteps
+    );
 }
