@@ -10,9 +10,6 @@
 
     --light_grey: #D0D0D0;
     --lighter_grey: rgb(231, 231, 231);
-
-    /* VARIABLES */
-    --nav_ease: 1;
 }
 
 html {
@@ -110,6 +107,8 @@ aside {
     overflow-y: auto;
 }
 
+/* try to fix */
+
 @media only screen and (max-width:800px) {
     body{
         overflow-x: hidden;
@@ -148,10 +147,3 @@ aside {
         text-align: center;
     }
 }
-
-/* @media only screen and (min-width: 800px) {
-    .nav_links {
-        display: flex;
-        transform: translateX(0%);
-    }
-} */
