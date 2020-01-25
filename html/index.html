@@ -11,15 +11,21 @@
     <link href="./css/brew_app_styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="shortcut icon" type="image/png" href="./res/imgs/favicon.png">
+
     <!--DELETE (FOR HAMBURGER ICON)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
 </head>
 
 <body class="works_on_smartphone">
     <header>
+
+        <div class="right"></div>
+
         <nav>
             <div class="logo" style="margin: auto 0 0;">
                 <a href="index.html" style="font-weight: bold;">
@@ -113,17 +119,17 @@ online that you want.-->
                     <div id="brew_details_container">
                         <figure>
                             <img src="./res/icns/ic_coffee_bean.svg" alt="Coffee Bean Icon">
-                            <figcaption><strong>Coffee Amount</strong></figcaption>
+                            <p><strong>Coffee Amount</strong></p>
                             <figcaption id="coffee_amount"></figcaption>
                         </figure>
                         <figure>
                             <i class="material-icons">invert_colors</i>
-                            <figcaption><strong>Water Amount</strong></figcaption>
+                            <p><strong>Water Amount</strong></p>
                             <figcaption id="water_amount"></figcaption>
                         </figure>
                         <figure>
                             <i class="material-icons">grain</i>
-                            <figcaption><strong>Grind<br>Size</strong></figcaption>
+                            <p><strong>Grind<br>Size</strong></p>
                             <figcaption id="grind_size"></figcaption>
                         </figure>
                     </div>
@@ -201,7 +207,8 @@ online that you want.-->
 
             <p>A quote from a favorite tv show of mine... (<em>Click the image to enlarge</em>)<img
                     src="https://i.pinimg.com/originals/81/6b/61/816b6188ff25f2ba774c45bf6e64fb14.jpg" alt="Dale Cooper"
-                    style="max-width:100%;height:auto;float:right;margin: 2% 0;" class="small" id="smart_thumbnail"></p>
+                    style="max-width:100;height:auto;float:right;margin: 2% 0;box-sizing: border-box;
+                    box-shadow: 5px 5px var(--accent);" class="small" id="smart_thumbnail"></p>
 
             <p>&ensp;&ensp;&ensp;&ensp;"Harry, I'm going to let you in on a little secret: every day, once a day, give
                 yourself a present. Don't plan it, don't wait for it, just let it happen. It could be a new shirt in a
@@ -211,7 +218,29 @@ online that you want.-->
         </article>
 
         <aside>
-            <p>placeholder to add comment thread later</p>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+
+                // var disqus_config = function () {
+                // this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                // this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                // };
+
+                (function () {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+
+                    s.src = 'https://coffee-world.disqus.com/embed.js';
+
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                    rel="nofollow">comments powered by Disqus.</a></noscript>
         </aside>
 
     </main>

@@ -8,7 +8,10 @@
     <link href="https://www.holbertonschool.com/level2/holberton.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
     <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/roasting_styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/png" href="./res/imgs/favicon.png">
 
     <!--DELETE (FOR HAMBURGER ICON)-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -50,14 +53,66 @@
     </header>
 
     <main>
-
         <article>
+            <div id="roast_img_container">
+                <h6>Roasting Trier</h6>
 
-            <p>Here is where the tweets will go...</p>
+                <img src="https://images.pexels.com/photos/312419/pexels-photo-312419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                    alt="Coffee Roaster Holding Trier" style="border: 3px solid var(--accent);">
+            </div>
+
+            <h5 style="font-weight: 700;margin-left: 10px;">The Roast</h5>
+
+            <p>&ensp;&ensp;&ensp;&ensp;<strong style="font-size: 2.4rem;">R</strong>oasting perhaps plays the largest
+                role in the flavor of coffee. The roasting process is all about breaking down the organic compounds
+                within the seed. This is done through manipulation of thermal & kinetic energy. Coffee roasting is a
+                destructive process, so it's important for the roaster to find a balance between how much and when they
+                would like to introduce that energy.
+            </p>
+
+            <p>&ensp;&ensp;&ensp;&ensp;In the coffee industry, roasting is considered to be a meld between
+                science and art. There is never a correct way to roast because taste is subjective and every bean is
+                different. The science of roasting is important for professionals in order to create a consistent
+                product. Changes in temperature are usually monitored throughout the roaster as well as airflow. Graphs
+                are usually made in real time, depicting delta temperatures and control changes. Below is an informative
+                video from Hasbean Coffee, on the various chemical changes the beans go through while being roasted...
+            </p>
+
+            <p></p>
+
+            <div class="youtube_container">
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aAHQsbqDn5Y"
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
 
         </article>
 
         <aside>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+                 */
+
+                // var disqus_config = function () {
+                // this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                // this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                // };
+
+                (function () {  // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+
+                    s.src = 'https://coffee-world.disqus.com/embed.js';
+
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript"
+                    rel="nofollow">comments powered by Disqus.</a></noscript>
             <p>placeholder to add comment thread later</p>
         </aside>
 
@@ -72,6 +127,8 @@
             </a>
         </p>
     </footer>
+
+    <script src="./js/roasting_behavior.js"></script>
 </body>
 
 </html>

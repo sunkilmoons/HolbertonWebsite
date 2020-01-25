@@ -1,0 +1,9 @@
+
+#pdg_link {
+    color:var(--accent);
+    text-decoration: none;
+}
+
+#pdg_link:hover {
+    color: var(--accent_dark);
+}
