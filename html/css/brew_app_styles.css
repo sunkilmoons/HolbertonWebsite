@@ -114,6 +114,10 @@
     margin-bottom: 5px;
 }
 
+.coffee_detail_title {
+    line-height: 1.8rem;
+}
+
 #coffee_amount, #water_amount, #grind_size {
     margin: 10px;
 }
