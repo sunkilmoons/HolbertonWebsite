@@ -157,7 +157,7 @@ aside {
         display: block;
         position: absolute;
         right: 0;
-        margin-right: 2%;
+        margin-right: 10px;
         bottom: 0;
         font-size: 2.8rem;
     }
