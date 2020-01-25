@@ -30,10 +30,19 @@ header {
 
 nav {
     display: flex;
+    flex-direction: row;
     position: absolute;
     bottom: 0;
     margin-bottom: 10px;
     width: 100%;
+    align-items: flex-end;
+}
+
+.logo > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10%;
 }
 
 .nav_links {
@@ -128,6 +137,7 @@ aside {
         align-items: center;
         width: 35vh;
         height: 90vh;
+        margin-top: 25px;
         justify-content: space-evenly;
         right: 0;
         height: 92vh;
